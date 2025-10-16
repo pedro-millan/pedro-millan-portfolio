@@ -1,73 +1,72 @@
-# React + TypeScript + Vite
+# Pedro P. Millán — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es mi portfolio profesional como desarrollador en formación (DAW) que contiene proyectos variados en diferentes lenguajes de programación y certificaciones oficiales con las que cuento.
+Construido con **React + TypeScript + Vite**, estilado con **TailwindCSS** y animado con **Framer Motion**.
 
-Currently, two official plugins are available:
+## Tech Stack
+- **React 18 + TypeScript**
+- **Vite** (bundler/dev server)
+- **TailwindCSS** (estilos utilitarios)
+- **Framer Motion** (animaciones)
+- **React Router** (rutas)
+- **ESLint + Prettier** (calidad de código)
+- **GitHub Actions** (CI) • **Vercel** (CD/Deploy)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Características
+- Diseño responsive con un toque futurista y contemporáneo
+- Animaciones suaves y accesibles
+- Secciones: Home · Projects · About · Contact
+- Arquitectura **escalable por features**
+- Lista de proyectos desde GitHub
 
-## React Compiler
+##  Roadmap
+- [x] Bootstrap React + TS + Vite
+- [x] Tailwind + Framer Motion
+- [x] Router + arquitectura por features
+- [ ] Navbar/Layout base
+- [ ] Listar proyectos desde GitHub automáticamente
+- [ ] Projects con tarjetas y links a repos
+- [ ] Integración GitHub API (proyectos dinámicos)
+- [ ] SEO/OG Tags + Analytics
+- [ ] Form de contacto (EmailJS / backend)
+- [ ] Dark mode
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Estructura (resumen)
+src/
+app/
+router/ # Router central
+providers/ # Contextos (tema, etc.)
+components/
+layout/ # Header, Footer, Navbar
+ui/ # UI reutilizable
+features/
+home/
+projects/
+components/
+about/
+contact/
+lib/ # utils, hooks
+assets/
 
-## Expanding the ESLint configuration
+## Desarrollo local
+```bash
+# clonar si es necesario
+git clone git@github.com:pedro-millan/pedro-millan-portfolio.git
+cd pedro-millan-portfolio
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# instalar dependencias
+npm install
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# arrancar dev server
+npm run dev
 ```
+## Deployment
+El proyecto será desplegado con Vercel y contará con CD automático (deploy en cada push a main).
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contacto
+📧 Email: (por añadir)
+🔗 GitHub: https://github.com/pedro-millan
+🔗 LinkedIn: https://www.linkedin.com/in/pedro-pablo-millán-mompó-499a36377/
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+💡 Proyecto en constante evolución — portfolio vivo 🚀
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
