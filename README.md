@@ -1,6 +1,7 @@
-# Pedro P. Millán — Portfolio
+# Pedro P. Millán Mompó — Portfolio
 
 Este es mi portfolio profesional como desarrollador en formación (DAW) que contiene proyectos variados en diferentes lenguajes de programación y certificaciones oficiales con las que cuento.
+
 Construido con **React + TypeScript + Vite**, estilado con **TailwindCSS** y animado con **Framer Motion**.
 
 ## Tech Stack
@@ -31,23 +32,6 @@ Construido con **React + TypeScript + Vite**, estilado con **TailwindCSS** y ani
 - [ ] Form de contacto (EmailJS / backend)
 - [ ] Dark mode
 
-## Estructura (resumen)
-src/
-app/
-router/ # Router central
-providers/ # Contextos (tema, etc.)
-components/
-layout/ # Header, Footer, Navbar
-ui/ # UI reutilizable
-features/
-home/
-projects/
-components/
-about/
-contact/
-lib/ # utils, hooks
-assets/
-
 ## Desarrollo local
 ```bash
 # clonar si es necesario
@@ -64,7 +48,7 @@ npm run dev
 El proyecto será desplegado con Vercel y contará con CD automático (deploy en cada push a main).
 
 ## Contacto
-📧 Email: (por añadir)
+📧 Email: millanpedrop@gmail.com
 🔗 GitHub: https://github.com/pedro-millan
 🔗 LinkedIn: https://www.linkedin.com/in/pedro-pablo-millán-mompó-499a36377/
 
