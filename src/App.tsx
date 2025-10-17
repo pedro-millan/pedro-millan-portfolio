@@ -1,17 +1,24 @@
-import { motion } from "framer-motion";
+import { Outlet } from "react-router-dom"
+import Navbar from "@/components/layout/Navbar"
 
 export default function App() {
   return (
-    <main className="min-h-screen grid place-items-center">
-      <motion.h1
-        className="text-4xl font-extrabold tracking-tight"
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        Pedro Millán — Portfolio
-      </motion.h1>
-    </main>
-  );
+    <div className="min-h-screen flex flex-col">
+      <header>
+        <Navbar />
+      </header>
+
+      {/* Padding top para no quedar oculto bajo el navbar fijo */}
+      <main className="flex-1 pt-20">
+        <Outlet />
+      </main>
+
+      <footer className="border-t border-zinc-800 py-6 text-center text-sm text-zinc-600">
+        © {new Date().getFullYear()} Pedro P. Millán Mompó. All rights reserved.
+      </footer>
+    </div>
+  )
 }
+
+
 
