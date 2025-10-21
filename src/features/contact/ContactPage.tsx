@@ -1,4 +1,4 @@
-import { Mail, Phone, Github, Linkedin } from "lucide-react"
+import { Mail, Phone, Github, Linkedin } from "lucide-react";
 
 export default function ContactPage() {
   return (
@@ -53,7 +53,6 @@ export default function ContactPage() {
         </a>
       </div>
     </section>
-  )
+  );
 }
 
-  

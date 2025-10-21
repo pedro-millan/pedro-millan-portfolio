@@ -8,21 +8,21 @@ export default function ProjectsPage() {
       </h2>
 
       <p className="text-neutral-400 max-w-2xl mx-auto text-center mb-16">
-        Estos son algunos de los proyectos que he desarrollado durante el último año, 
-        usando lenguajes como Java o Python. 
+        Estos son algunos de los proyectos que he desarrollado durante el último año,
+        usando lenguajes como Java o Python.
         <br /> <br />
-        <strong>Tratando siempre de mantener un enfoque limpio, mantenible y orientado a resultados.</strong>
+        <strong>
+          Tratando siempre de mantener un enfoque limpio, mantenible y orientado a resultados.
+        </strong>
       </p>
 
-      {/* ✅ Un solo GRID para todas las cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-
         <ProjectCard
           title="Autenticador de usuarios"
           description="API de control de acceso."
           tech={["Python", "VSCode", "FastAPI"]}
           github="https://github.com/pedro-millan/UserAuthAPI"
-          image="/public/userauth.png"
+          image="/userauth.png"
         />
 
         <ProjectCard
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
           description="Controla altas y modificaciones."
           tech={["Java", "NetBeans"]}
           github="https://github.com/pedro-millan/control-acceso-java"
-          image="/public/acceso.png"
+          image="/acceso.png"
         />
 
         <ProjectCard
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
           description="Programa temporizador."
           tech={["Python", "VSCode"]}
           github="https://github.com/pedro-millan/Temporizador-python"
-          image="/public/temporizador.png"
+          image="/temporizador.png"
         />
 
         <ProjectCard
@@ -46,14 +46,11 @@ export default function ProjectsPage() {
           description="Contea caracteres concretos en un archivo de texto."
           tech={["Python", "VSCode"]}
           github="https://github.com/pedro-millan/contador_caracteres_latinos"
-          image="/public/latinos.png"
+          image="/latinos.png"
         />
-
       </div>
     </section>
   );
 }
 
 
-  
-  

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
@@ -9,14 +9,12 @@ const links = [
   { to: "/contact", label: "CONTACT" },
 ];
 
-export default function Navbar() {
+function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800 bg-black/40 backdrop-blur-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        
-        {/* Logo */}
         <div className="text-lg font-semibold tracking-wide whitespace-nowrap">
           Pedro P. Millán Mompó
           <br />
@@ -44,7 +42,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Botón hamburguesa (solo en móvil) */}
+        {/* Botón hamburguesa */}
         <button
           className="md:hidden text-zinc-300 hover:text-primary transition"
           onClick={() => setOpen(!open)}
@@ -78,5 +76,5 @@ export default function Navbar() {
   );
 }
 
-
+export default Navbar;
 
