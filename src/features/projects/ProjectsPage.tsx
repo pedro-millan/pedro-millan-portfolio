@@ -9,7 +9,9 @@ export default function ProjectsPage() {
 
       <p className="text-neutral-400 max-w-2xl mx-auto text-center mb-16">
         Estos son algunos de los proyectos que he desarrollado durante el último año, 
-        usando lenguajes como Java o Python.
+        usando lenguajes como Java o Python. 
+        <br /> <br />
+        <strong>Tratando siempre de mantener un enfoque limpio, mantenible y orientado a resultados.</strong>
       </p>
 
       {/* ✅ Un solo GRID para todas las cards */}

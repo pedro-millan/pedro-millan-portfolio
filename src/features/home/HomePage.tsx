@@ -5,11 +5,14 @@ export default function HomePage() {
         Hola, soy <a href="about"><span className="text-primary">Pedro P. Millán Mompó</span></a>
       </h1>
       <h2 className="text-xl text-neutral-300 mb-6">
-        Técnico Superior en Desarrollo de Aplicaciones Web
+        Futuro Técnico Superior en Desarrollo de Aplicaciones Web
       </h2>
       <p className="text-neutral-400 max-w-2xl mx-auto mb-8">
-        Desarrollo web con enfoque limpio, mantenible y orientado a resultados.
-        En constante aprendizaje de las tecnologías y herramientas contemporáneas más eficientes.
+      
+          Actualmente cursando el <em>Grado Superior en Desarrollo de Aplicaciones Web (DAW)</em> y 
+        construyendo proyectos propios mientras profundizo en programación backend y frontend. <br />
+        Me instruyo diariamente
+        en ámbitos que complementan mis habilidades como futuro full stack developer, y estoy en <strong>constante aprendizaje</strong> de las tecnologías y herramientas contemporáneas más eficientes.
         <br />
         </p>
         <img src="yo.jpg" alt="Pedro P. Millán - Full Stack Junior Developer" className="w-40 h-50 rounded-full object-cover mx-auto mb-6 border border-neutral-700"/>
@@ -20,16 +23,15 @@ export default function HomePage() {
       Puedes encontrar más sobre mis proyectos y perfil profesional clicando abajo:
       </p>
       <div className = "flex gap-4">
-        <a href="https://github.com/pedro-millan" className="px-5 py-2 bg-primary text-white rounded-md hover:bg-primary/80 transition h-10">
-          GitHub
+        <a href="https://github.com/pedro-millan" target="blank" className="flex items-center justify-center bg-neutral-900 border hover:border-primary transition">
+        <img src="/github.png" alt="GitHub" className="w-13 h-10 object-contain" />
         </a>
-        <a href="https://www.linkedin.com/in/pedro-pablo-millán-mompó-499a36377/" className="px-5 py-2 border border-neutral-700 rounded-md hover:border-primary transition">
-          LinkedIn
+        <a href="https://www.linkedin.com/in/pedro-pablo-millán-mompó-499a36377/" target="blank" className="flex items-center justify-center w-12 h-12 bg-neutral-900 border hover:border-primary transition">
+        <img src="/in.png" alt="LinnkedIn" className="w-30 h-30 object-contain" />
         </a>
       </div>
     </section>
   );
 }
-
 
 
