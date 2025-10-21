@@ -55,32 +55,30 @@ export default function AboutPage() {
           />
         </a>
         {/* LINUX */}
-<a
-  className="w-94 bg-neutral-900 border border-neutral-800 rounded-lg p-4 hover:border-primary transition flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:shadow-primary/10"
->
-  <p className="text-neutral-200 font-medium mb-2">Linux Unhatched</p>
-  <p className="text-2xl">🐧</p>
-  <img
-    src="/linux.png"
-    alt="Linux Unhatched Certificate"
-    className="w-full object-cover mt-3 rounded"
-  />
-</a>
+        <a
+          className="w-94 bg-neutral-900 border border-neutral-800 rounded-lg p-4 hover:border-primary transition flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:shadow-primary/10"
+        >
+          <p className="text-neutral-200 font-medium mb-2">Linux Unhatched</p>
+          <p className="text-2xl">🐧</p>
+          <img
+            src="/linux.png"
+            alt="Linux Unhatched Certificate"
+            className="w-full object-cover mt-3 rounded"
+          />
+        </a>
 
-{/* CIBERSEGURIDAD */}
-<a
-  className="w-94 bg-neutral-900 border border-neutral-800 rounded-lg p-4 hover:border-primary transition flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:shadow-primary/10"
->
-  <p className="text-neutral-200 font-medium mb-2">Introduction to Cybersecurity</p>
-  <p className="text-2xl">🔒</p>
-  <img
-    src="/ciber.png"
-    alt="Introducción a la Ciberseguridad"
-    className="w-full object-cover mt-3 rounded"
-  />
-</a>
-
-
+        {/* CIBERSEGURIDAD */}
+        <a
+          className="w-94 bg-neutral-900 border border-neutral-800 rounded-lg p-4 hover:border-primary transition flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:shadow-primary/10"
+        >
+          <p className="text-neutral-200 font-medium mb-2">Introduction to Cybersecurity</p>
+          <p className="text-2xl">🔒</p>
+          <img
+            src="/ciber.png"
+            alt="Introducción a la Ciberseguridad"
+            className="w-full object-cover mt-3 rounded"
+          />
+        </a>
         </div>
       </div>
 

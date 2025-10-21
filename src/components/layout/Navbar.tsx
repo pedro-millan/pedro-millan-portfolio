@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react"; // iconos para abrir/cerrar menú
+import { Menu, X } from "lucide-react";
 
 const links = [
   { to: "/", label: "HOME" },
