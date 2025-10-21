@@ -1,5 +1,5 @@
-import { Outlet } from "react-router-dom"
-import Navbar from "@/components/layout/Navbar"
+import { Outlet } from "react-router-dom";
+import Navbar from "@/components/layout/Navbar";
 
 export default function App() {
   return (
@@ -8,7 +8,6 @@ export default function App() {
         <Navbar />
       </header>
 
-      {/* Padding top para no quedar oculto bajo el navbar fijo */}
       <main className="flex-1 pt-20">
         <Outlet />
       </main>
@@ -17,8 +16,9 @@ export default function App() {
         © {new Date().getFullYear()} Pedro P. Millán Mompó. All rights reserved.
       </footer>
     </div>
-  )
+  );
 }
+
 
 
 
