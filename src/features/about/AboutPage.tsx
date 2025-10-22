@@ -24,13 +24,13 @@ export default function AboutPage() {
           className="w-94 bg-neutral-900 border border-neutral-800 rounded-lg p-4 hover:border-primary transition flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:shadow-primary/10"
         >
           <img
-            src="/PCAPbadge.png"
+            src={`${import.meta.env.BASE_URL}PCAPbadge.png`}
             alt="PCAP Badge"
             className="w-20 h-20 object-contain mb-3"
           />
           <p className="text-neutral-200 font-medium">Python PCAP</p>
           <img
-            src="/certi.png"
+            src={`${import.meta.env.BASE_URL}certi.png`}
             alt="Certificado PCAP"
             className="w-full object-cover mt-3 rounded"
           />
@@ -43,13 +43,13 @@ export default function AboutPage() {
           className="w-94 bg-neutral-900 border border-neutral-800 rounded-lg p-4 hover:border-primary transition flex flex-col items-center text-center shadow-sm hover:shadow-lg hover:shadow-primary/10"
         >
           <img
-            src="/pcep.png"
+            src={`${import.meta.env.BASE_URL}pcep.png`}
             alt="PCEP Badge"
             className="w-20 h-20 object-contain mb-3"
           />
           <p className="text-neutral-200 font-medium">Python PCEP</p>
           <img
-            src="/pcepcertif.png"
+            src={`${import.meta.env.BASE_URL}pcepcertif.png`}
             alt="Certificado PCEP"
             className="w-full object-cover mt-3 rounded"
           />
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <p className="text-neutral-200 font-medium mb-2">Linux Unhatched</p>
           <p className="text-2xl">🐧</p>
           <img
-            src="/linux.png"
+            src={`${import.meta.env.BASE_URL}linux.png`}
             alt="Linux Unhatched Certificate"
             className="w-full object-cover mt-3 rounded"
           />
@@ -74,7 +74,7 @@ export default function AboutPage() {
           <p className="text-neutral-200 font-medium mb-2">Introduction to Cybersecurity</p>
           <p className="text-2xl">🔒</p>
           <img
-            src="/ciber.png"
+            src={`${import.meta.env.BASE_URL}ciber.png`}
             alt="Introducción a la Ciberseguridad"
             className="w-full object-cover mt-3 rounded"
           />

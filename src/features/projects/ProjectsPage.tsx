@@ -22,7 +22,7 @@ export default function ProjectsPage() {
           description="API de control de acceso."
           tech={["Python", "VSCode", "FastAPI"]}
           github="https://github.com/pedro-millan/UserAuthAPI"
-          image="/public/userauth.png"
+          image={`${import.meta.env.BASE_URL}userauth.png`}
         />
 
         <ProjectCard
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
           description="Controla altas y modificaciones."
           tech={["Java", "NetBeans"]}
           github="https://github.com/pedro-millan/control-acceso-java"
-          image="/public/acceso.png"
+          image={`${import.meta.env.BASE_URL}acceso.png`}
         />
 
         <ProjectCard
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
           description="Programa temporizador."
           tech={["Python", "VSCode"]}
           github="https://github.com/pedro-millan/Temporizador-python"
-          image="/public/temporizador.png"
+          image={`${import.meta.env.BASE_URL}temporizador.png`}
         />
 
         <ProjectCard
@@ -46,7 +46,7 @@ export default function ProjectsPage() {
           description="Contea caracteres concretos en un archivo de texto."
           tech={["Python", "VSCode"]}
           github="https://github.com/pedro-millan/contador_caracteres_latinos"
-          image="/public/latinos.png"
+          image={`${import.meta.env.BASE_URL}latinos.png`}
         />
 
       </div>

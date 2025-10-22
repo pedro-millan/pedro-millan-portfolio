@@ -24,10 +24,10 @@ export default function HomePage() {
       </p>
       <div className = "flex gap-4">
         <a href="https://github.com/pedro-millan" target="blank" className="flex items-center justify-center bg-neutral-900 border hover:border-primary transition">
-        <img src="/github.png" alt="GitHub" className="w-13 h-10 object-contain" />
+        <img src={`${import.meta.env.BASE_URL}github.png`} alt="GitHub" className="w-13 h-10 object-contain" />
         </a>
         <a href="https://www.linkedin.com/in/pedro-pablo-millán-mompó-499a36377/" target="blank" className="flex items-center justify-center w-12 h-12 bg-neutral-900 border hover:border-primary transition">
-        <img src="/in.png" alt="LinnkedIn" className="w-30 h-30 object-contain" />
+        <img src={`${import.meta.env.BASE_URL}in.png`} alt="LinnkedIn" className="w-30 h-30 object-contain" />
         </a>
       </div>
     </section>
