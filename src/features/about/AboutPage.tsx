@@ -91,6 +91,8 @@ export default function AboutPage() {
       { name: "Python", icon: "🐍" },
       { name: "Java", icon: "☕" },
       { name: "PHP", icon: "🐘" },
+      { name: "TypeScript", icon: "🌀" },
+      { name: "Node.js", icon: "🟢" },
       { name: "MySQL", icon: "🗄️" },
       { name: "Git & GitHub", icon: "🐙" },
       { name: "Linux", icon: "🐧" },
