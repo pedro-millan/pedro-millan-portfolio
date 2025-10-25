@@ -5,7 +5,7 @@ export default function HomePage() {
         Hola, soy <a href="about"><span className="text-primary">Pedro P. Millán Mompó</span></a>
       </h1>
       <h2 className="text-xl text-neutral-300 mb-6">
-        Futuro Técnico Superior en Desarrollo de Aplicaciones Web
+        Técnico Superior en Desarrollo de Aplicaciones Web
       </h2>
       <p className="text-neutral-400 max-w-2xl mx-auto mb-8">
       
