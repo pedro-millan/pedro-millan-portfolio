@@ -49,6 +49,14 @@ export default function ProjectsPage() {
           image={`${import.meta.env.BASE_URL}latinos.png`}
         />
 
+        <ProjectCard
+          title="Contador ocurrencias anuales"
+          description="Contea ocurrencias de un día de la semana concreto a lo largo de un año."
+          tech={["Python", "VSCode"]}
+          github="https://github.com/pedro-millan/contador_ocurrencias_anuales"
+          image={`${import.meta.env.BASE_URL}anuales.png`}
+        />
+
       </div>
     </section>
   );
