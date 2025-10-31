@@ -96,7 +96,11 @@ export default function AboutPage() {
       { name: "MySQL", icon: "🗄️" },
       { name: "Git & GitHub", icon: "🐙" },
       { name: "Linux", icon: "🐧" },
-      { name: "HTML / CSS / JS", icon: "🧩" },
+      { name: "Apache", icon: "🪶" },
+      { name: "Tomcat", icon: "🐱" },
+      { name: "HTML5", icon: "🧩" },
+      { name: "CSS3", icon: "🎨" },
+      { name: "JavaScript", icon: "🧱" },
     ].map((tech) => (
       <div
         key={tech.name}
