@@ -29,11 +29,14 @@ export const shopifyProjects: ShopifyProject[] = [
     projectUrl: "https://shutsami.myshopify.com",
     password: "demo_2026",
     desktop: {
-      vimeoUrl: "https://vimeo.com/1197986706?fl=ip&fe=ec",
+      vimeoUrl: "https://player.vimeo.com/video/1197986706",
       images: [
         { src: "1.webp", alt: "Captura desktop 1" },
         { src: "2.webp", alt: "Captura desktop 2" },
         { src: "3.webp", alt: "Captura desktop 3" },
+        { src: "4.webp", alt: "Captura desktop 4" },
+        { src: "5.webp", alt: "Captura desktop 5" },
+        { src: "6.webp", alt: "Captura desktop 6" },
       ],
     },
     mobile: {

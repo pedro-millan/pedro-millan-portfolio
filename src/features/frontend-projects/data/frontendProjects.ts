@@ -42,7 +42,7 @@ export const frontendProjects: FrontendProject[] = [
       ],
     },
     mobile: {
-      vimeoUrl: "https://vimeo.com/1198009167?share=copy&fl=sv&fe=ci",
+      vimeoUrl: "https://player.vimeo.com/video/1198009167",
       images: [
         { src: "m1.webp", alt: "Vista móvil 1" },
         { src: "m2.webp", alt: "Vista móvil 2" },

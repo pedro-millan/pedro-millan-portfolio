@@ -32,9 +32,9 @@ function VimeoPlayer({ url }: { url: string }) {
     <div className="relative w-full rounded-2xl overflow-hidden border border-neutral-700 shadow-2xl shadow-black/60 bg-black"
       style={{ paddingBottom: "56.25%" /* 16:9 */ }}>
       <iframe
-        src={`${url}?color=8b5cf6&title=0&byline=0&portrait=0&badge=0`}
+        src={`${url}?autoplay=1&muted=1&loop=1color=8b5cf6&title=0&byline=0&portrait=0&badge=0`}
         className="absolute inset-0 w-full h-full"
-        allow="autoplay; fullscreen; picture-in-picture"
+        allow="autoplay; fullscreen; picture-in-picture; muted"
         allowFullScreen
         loading="lazy"
         title="Demo del proyecto"
