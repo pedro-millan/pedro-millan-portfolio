@@ -80,9 +80,6 @@ function useTypewriter(text: string, speed = 45) {
   return { displayed, done };
 }
 
-// ── Clip-path hexagonal ───────────────────────────────────────────────────────
-const HEX = "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
-
 // ── Página ────────────────────────────────────────────────────────────────────
 export default function HomePage() {
   const { t, lang } = useLanguage();
@@ -131,18 +128,13 @@ export default function HomePage() {
           <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary/60" />
         </div>
 
-        {/* Foto hexagonal */}
+        {/* Foto cuadrada */}
         <div className="anim-4 relative mb-6">
-          {/* capa de borde con gradiente */}
-          <div
-            className="absolute -inset-[3px] bg-gradient-to-br from-primary/80 via-blue-500/50 to-violet-600/80"
-            style={{ clipPath: HEX }}
-          />
+          <div className="absolute -inset-[3px] rounded-2xl bg-gradient-to-br from-primary/80 via-blue-500/50 to-violet-600/80" />
           <img
-            src={`${import.meta.env.BASE_URL}yo-smile.webp`}
+            src={`${import.meta.env.BASE_URL}yo.jpg`}
             alt="Pedro P. Millán"
-            className="relative w-36 h-36 object-cover"
-            style={{ clipPath: HEX }}
+            className="relative w-48 h-48 object-cover rounded-2xl"
           />
         </div>
 

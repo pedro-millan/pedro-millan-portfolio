@@ -25,7 +25,7 @@ export default function Navbar() {
         <img
           src={`${import.meta.env.BASE_URL}logo-pedro-millan.webp`}
           alt="Pedro Millán Portfolio"
-          className="max-w-7xl mx-auto flex items-center justify-between pl-1 pr-4 xl:pl-2 xl:pr-6 py-4"
+          className="max-w-2xl mx-auto flex items-center justify-between pl-1 pr-4 xl:pl-2 xl:pr-6 py-4"
         />
 
         {/* Menú desktop */}
