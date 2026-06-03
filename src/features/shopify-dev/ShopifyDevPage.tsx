@@ -7,7 +7,7 @@ export default function ShopifyDevPage() {
   const sd = t.shopifyDev;
 
   return (
-    <section className="container-max py-20">
+    <section className="container-max py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-12">
         {sd.title} <span className="text-primary">{sd.titleHighlight}</span>
       </h2>

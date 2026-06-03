@@ -7,7 +7,7 @@ export default function FrontendProjectsPage() {
   const fp = t.frontendProjects;
 
   return (
-    <section className="container-max py-20">
+    <section className="container-max py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <h2 className="text-4xl font-bold text-center mb-12">
         {fp.title} <span className="text-primary">{fp.titleHighlight}</span>
       </h2>

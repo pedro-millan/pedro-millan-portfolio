@@ -25,7 +25,7 @@ export default function Navbar() {
         <img
           src={`${import.meta.env.BASE_URL}logo-pedro-millan.webp`}
           alt="Pedro Millán Portfolio"
-          className="max-w-2xl mx-auto flex items-center justify-between pl-1 pr-4 xl:pl-2 xl:pr-6 py-4"
+          className="h-8 w-auto md:h-10 lg:h-9 xl:h-12 xl:-ml-36"
         />
 
         {/* Menú desktop */}
@@ -36,7 +36,7 @@ export default function Navbar() {
                 to={link.to}
                 end={link.to === "/"}
                 className={({ isActive }) =>
-                  `whitespace-nowrap px-1 xl:px-0 hover:text-primary transition-colors ${
+                  `whitespace-nowrap xl:px-1 hover:text-primary transition-colors ${
                     isActive ? "text-primary" : "text-zinc-300"
                   }`
                 }
@@ -44,16 +44,16 @@ export default function Navbar() {
                 {link.label}
               </NavLink>
               {index < links.length - 1 && (
-                <span className="text-zinc-700 mx-2 xl:mx-3">|</span>
+                <span className="text-zinc-700 mx-1 xl:mx-3">|</span>
               )}
             </div>
           ))}
 
           {/* Switch de idioma */}
-          <span className="text-zinc-700 mx-2">|</span>
+          <span className="text-zinc-700 mx-1 xl:mx-2">|</span>
           <button
             onClick={toggleLang}
-            className="text-[11px] xl:text-xs font-bold px-2 xl:px-3 py-1 rounded border border-zinc-700 hover:border-primary hover:text-primary transition-colors text-zinc-300 shrink-0"
+            className="text-[11px] xl:text-xs font-bold px-1 xl:px-3 py-1 rounded border border-zinc-700 hover:border-primary hover:text-primary transition-colors text-zinc-300 shrink-0"
             title={lang === "es" ? "Switch to English" : "Cambiar a Español"}
           >
             {lang === "es" ? "EN" : "ES"}

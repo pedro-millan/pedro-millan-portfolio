@@ -31,7 +31,7 @@ export default function PortfolioCard({
         <img
           src={thumbSrc}
           alt={title}
-          className="w-full h-80 object-cover border-b border-neutral-800 group-hover:opacity-90 transition"
+          className="w-full h-auto border-b border-neutral-800 group-hover:opacity-90 transition"
         />
       ) : (
         <div className="w-full h-48 bg-neutral-900 border-b border-neutral-800 flex items-center justify-center text-neutral-600 text-sm">

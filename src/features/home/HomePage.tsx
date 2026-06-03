@@ -113,7 +113,7 @@ export default function HomePage() {
 
         {/* Nombre */}
         <h1 className="anim-2 text-5xl md:text-6xl font-extrabold tracking-tight mb-2 leading-tight">
-          <span className="gradient-name">Pedro P. Millán Mompó</span>
+          <span className="gradient-name">Pedro Millán</span>
         </h1>
 
         {/* Separador + subtítulo typewriter */}
@@ -132,9 +132,9 @@ export default function HomePage() {
         <div className="anim-4 relative mb-6">
           <div className="absolute -inset-[3px] rounded-2xl bg-gradient-to-br from-primary/80 via-blue-500/50 to-violet-600/80" />
           <img
-            src={`${import.meta.env.BASE_URL}yo.jpg`}
+            src={`${import.meta.env.BASE_URL}yo-smile.webp`}
             alt="Pedro P. Millán"
-            className="relative w-48 h-48 object-cover rounded-2xl"
+            className="relative w-52 h-64 object-cover rounded-2xl"
           />
         </div>
 
