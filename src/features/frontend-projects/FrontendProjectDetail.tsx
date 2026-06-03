@@ -4,10 +4,7 @@ import { frontendProjects } from "./data/frontendProjects";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import type { ViewportMedia } from "./data/frontendProjects";
 
-// ── Sub-card de viewport ────────────────────────────────
-function ViewportCard({
-  label, icon, isActive, onClick,
-}: {
+function ViewportCard({ label, icon, isActive, onClick }: {
   label: string; icon: string; isActive: boolean; onClick: () => void;
 }) {
   return (
@@ -26,12 +23,10 @@ function ViewportCard({
       <span className={`text-xs tracking-wide transition-colors ${isActive ? "text-primary/80" : "text-neutral-500 group-hover:text-neutral-300"}`}>
         {isActive ? "✓ Seleccionado" : "Ver vídeo y capturas"}
       </span>
-      {isActive && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-b-full" />}
     </button>
   );
 }
 
-// ── Galería de viewport ────────────────────────────────────────────────────────
 function ViewportGallery({ data }: { data: ViewportMedia }) {
   return (
     <div className="mt-8">
@@ -45,12 +40,8 @@ function ViewportGallery({ data }: { data: ViewportMedia }) {
       {data.images.length > 0 && (
         <div className="grid grid-cols-2 gap-4">
           {data.images.map((img, i) => (
-            <img
-              key={i}
-              src={`${import.meta.env.BASE_URL}${img.src}`}
-              alt={img.alt}
-              className="w-full rounded-xl border border-neutral-800 object-cover hover:border-primary/40 transition-colors duration-200"
-            />
+            <img key={i} src={`${import.meta.env.BASE_URL}${img.src}`} alt={img.alt}
+              className="w-full rounded-xl border border-neutral-800 object-cover hover:border-primary/40 transition-colors duration-200" />
           ))}
         </div>
       )}
@@ -58,7 +49,6 @@ function ViewportGallery({ data }: { data: ViewportMedia }) {
   );
 }
 
-// ── Página de detalle ─────────────────────────────────────────────────────────
 export default function FrontendProjectDetail() {
   const { id } = useParams<{ id: string }>();
   const { t } = useLanguage();
@@ -75,11 +65,10 @@ export default function FrontendProjectDetail() {
     );
   }
 
-  const hasViewports = !!(project.desktop || project.mobile);
-
   return (
     <section className="container-max py-20 max-w-4xl mx-auto px-4">
-      <Link to="/frontend-projects" className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-primary transition mb-10">
+      <Link to="/frontend-projects"
+        className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-primary transition mb-10">
         {fp.backLink}
       </Link>
 
@@ -102,10 +91,10 @@ export default function FrontendProjectDetail() {
         </a>
       )}
 
-      {hasViewports && (
+      {(project.desktop || project.mobile) && (
         <div>
           <p className="text-xs font-semibold text-neutral-500 mb-5 tracking-widest uppercase">Vista del Proyecto</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {project.desktop && (
               <ViewportCard label="Desktop" icon="🖥️"
                 isActive={activeView === "desktop"}
@@ -117,7 +106,6 @@ export default function FrontendProjectDetail() {
                 onClick={() => setActiveView(activeView === "mobile" ? null : "mobile")} />
             )}
           </div>
-
           {activeView === "desktop" && project.desktop && <ViewportGallery data={project.desktop} />}
           {activeView === "mobile"  && project.mobile  && <ViewportGallery data={project.mobile}  />}
         </div>

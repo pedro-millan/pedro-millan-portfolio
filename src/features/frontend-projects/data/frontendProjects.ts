@@ -1,3 +1,12 @@
+// ================================================================
+//  PROYECTOS FRONTEND — Archivo de datos
+// ================================================================
+//  CÓMO AÑADIR UN NUEVO PROYECTO:
+//  1. Pon imágenes y vídeos en /public
+//  2. Copia el bloque de Vulcan, edita los campos
+//  3. desktop.images → capturas escritorio | mobile.images → capturas móvil
+// ================================================================
+
 export interface ViewportMedia {
   video?: string;
   images: { src: string; alt: string }[];
