@@ -4,9 +4,7 @@ import { shopifyProjects } from "./data/shopifyProjects";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import type { ViewportMedia } from "./data/shopifyProjects";
 
-function ViewportCard({
-  label, icon, isActive, onClick,
-}: {
+function ViewportCard({ label, icon, isActive, onClick }: {
   label: string; icon: string; isActive: boolean; onClick: () => void;
 }) {
   return (
@@ -27,21 +25,37 @@ function ViewportCard({
   );
 }
 
+function VimeoPlayer({ url }: { url: string }) {
+  return (
+    <div
+      className="relative w-full rounded-2xl overflow-hidden border border-neutral-700 shadow-2xl shadow-black/60 bg-black"
+      style={{ paddingBottom: "56.25%" /* 16:9 */ }}
+    >
+      <iframe
+        src={`${url}?color=8b5cf6&title=0&byline=0&portrait=0&badge=0`}
+        className="absolute inset-0 w-full h-full"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+        loading="lazy"
+        title="Demo del proyecto"
+      />
+    </div>
+  );
+}
+
 function ViewportGallery({ data }: { data: ViewportMedia }) {
   return (
-    <div className="mt-8">
-      {data.video && (
-        <video
-          src={`${import.meta.env.BASE_URL}${data.video}`}
-          controls
-          className="w-full max-h-[80vh] rounded-2xl border border-neutral-800 mb-8 shadow-xl object-contain bg-black"
-        />
-      )}
+    <div className="mt-8 space-y-8">
+      {data.vimeoUrl && <VimeoPlayer url={data.vimeoUrl} />}
       {data.images.length > 0 && (
         <div className="grid grid-cols-2 gap-4">
           {data.images.map((img, i) => (
-            <img key={i} src={`${import.meta.env.BASE_URL}${img.src}`} alt={img.alt}
-              className="w-full rounded-xl border border-neutral-800 object-cover hover:border-primary/40 transition-colors duration-200" />
+            <img
+              key={i}
+              src={`${import.meta.env.BASE_URL}${img.src}`}
+              alt={img.alt}
+              className="w-full rounded-xl border border-neutral-800 object-cover hover:border-primary/40 transition-colors duration-200"
+            />
           ))}
         </div>
       )}
@@ -65,11 +79,12 @@ export default function ShopifyDevDetail() {
     );
   }
 
-  const hasViewports = !!(project.desktop || project.mobile);
-
   return (
     <section className="container-max py-20 max-w-4xl mx-auto px-4">
-      <Link to="/shopify-dev" className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-primary transition mb-10">
+      <Link
+        to="/shopify-dev"
+        className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-primary transition mb-10"
+      >
         {sd.backLink}
       </Link>
 
@@ -92,42 +107,39 @@ export default function ShopifyDevDetail() {
       )}
 
       {project.projectUrl && (
-        <a href={project.projectUrl} target="_blank" rel="noopener noreferrer"
-          className="inline-block mb-12 px-6 py-3 border border-primary text-primary rounded-xl hover:bg-primary hover:text-black transition font-semibold">
+        <a
+          href={project.projectUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mb-12 px-6 py-3 border border-primary text-primary rounded-xl hover:bg-primary hover:text-black transition font-semibold"
+        >
           {sd.liveProject}
         </a>
       )}
 
-      {hasViewports && (
+      {(project.desktop || project.mobile) && (
         <div>
           <p className="text-xs font-semibold text-neutral-500 mb-5 tracking-widest uppercase">Vista del Proyecto</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {project.desktop && (
-              <ViewportCard label="Desktop" icon="🖥️"
+              <ViewportCard
+                label="Desktop"
+                icon="🖥️"
                 isActive={activeView === "desktop"}
-                onClick={() => setActiveView(activeView === "desktop" ? null : "desktop")} />
+                onClick={() => setActiveView(activeView === "desktop" ? null : "desktop")}
+              />
             )}
             {project.mobile && (
-              <ViewportCard label="Móvil" icon="📱"
+              <ViewportCard
+                label="Móvil"
+                icon="📱"
                 isActive={activeView === "mobile"}
-                onClick={() => setActiveView(activeView === "mobile" ? null : "mobile")} />
+                onClick={() => setActiveView(activeView === "mobile" ? null : "mobile")}
+              />
             )}
           </div>
           {activeView === "desktop" && project.desktop && <ViewportGallery data={project.desktop} />}
           {activeView === "mobile"  && project.mobile  && <ViewportGallery data={project.mobile}  />}
-        </div>
-      )}
-
-      {!hasViewports && project.media && project.media.length > 0 && (
-        <div>
-          <p className="text-xs font-semibold text-neutral-500 mb-5 tracking-widest uppercase">{sd.gallery}</p>
-          <div className="flex flex-col gap-6">
-            {project.media.map((item, i) =>
-              item.type === "video"
-                ? <video key={i} src={`${import.meta.env.BASE_URL}${item.src}`} controls className="w-full max-h-[80vh] rounded-2xl border border-neutral-800 shadow-xl object-contain bg-black" />
-                : <img key={i} src={`${import.meta.env.BASE_URL}${item.src}`} alt={item.alt} className="w-full rounded-xl border border-neutral-800 object-cover" />
-            )}
-          </div>
         </div>
       )}
     </section>

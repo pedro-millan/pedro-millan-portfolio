@@ -1,11 +1,18 @@
+// ================================================================
+//  PROYECTOS SHOPIFY DEV — Archivo de datos
+// ================================================================
+//  CÓMO AÑADIR UN NUEVO PROYECTO:
+//  1. Pon imágenes en /public
+//  2. Copia el bloque de Shutsami, edita los campos
+//  3. vimeoUrl → URL embed de Vimeo: https://player.vimeo.com/video/ID
+//  4. desktop.images → capturas escritorio | mobile.images → capturas móvil
+// ================================================================
+
 export interface ViewportMedia {
-  video?: string;
+  /** URL embed de Vimeo, p.ej. "https://player.vimeo.com/video/123456789" */
+  vimeoUrl?: string;
   images: { src: string; alt: string }[];
 }
-
-export type MediaItem =
-  | { type: "image"; src: string; alt: string }
-  | { type: "video"; src: string };
 
 export interface ShopifyProject {
   id: string;
@@ -18,7 +25,6 @@ export interface ShopifyProject {
   password?: string;
   desktop?: ViewportMedia;
   mobile?: ViewportMedia;
-  media?: MediaItem[];
 }
 
 export const shopifyProjects: ShopifyProject[] = [
@@ -32,14 +38,21 @@ export const shopifyProjects: ShopifyProject[] = [
     thumbnail: "1.webp",
     projectUrl: "https://shutsami.myshopify.com",
     password: "demo_2026",
-    media: [
-      { type: "video", src: "shutsami-video-demo.mp4" },
-      { type: "image", src: "1.webp", alt: "Captura 1" },
-      { type: "image", src: "2.webp", alt: "Captura 2" },
-      { type: "image", src: "3.webp", alt: "Captura 3" },
-      { type: "image", src: "4.webp", alt: "Captura 4" },
-      { type: "image", src: "5.webp", alt: "Captura 5" },
-      { type: "image", src: "6.webp", alt: "Captura 6" },
-    ],
+    desktop: {
+      vimeoUrl: "https://player.vimeo.com/video/XXXXXXXXX", // ← sustituye con el ID real
+      images: [
+        { src: "1.webp", alt: "Captura desktop 1" },
+        { src: "2.webp", alt: "Captura desktop 2" },
+        { src: "3.webp", alt: "Captura desktop 3" },
+      ],
+    },
+    mobile: {
+      vimeoUrl: "https://player.vimeo.com/video/YYYYYYYYY", // ← sustituye con el ID real
+      images: [
+        { src: "4.webp", alt: "Captura móvil 1" },
+        { src: "5.webp", alt: "Captura móvil 2" },
+        { src: "6.webp", alt: "Captura móvil 3" },
+      ],
+    },
   },
 ];
