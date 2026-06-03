@@ -139,7 +139,7 @@ export default function HomePage() {
             style={{ clipPath: HEX }}
           />
           <img
-            src={`${import.meta.env.BASE_URL}yo.jpg`}
+            src={`${import.meta.env.BASE_URL}yo-smile.webp`}
             alt="Pedro P. Millán"
             className="relative w-36 h-36 object-cover"
             style={{ clipPath: HEX }}

@@ -1,10 +1,3 @@
-// ================================================================
-//  PROYECTOS FRONTEND — Archivo de datos
-// ================================================================
-//  description y longDescription son objetos { es, en }.
-//  Los componentes eligen el idioma activo automáticamente.
-// ================================================================
-
 export interface LocalizedText {
   es: string;
   en: string;

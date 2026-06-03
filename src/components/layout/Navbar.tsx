@@ -22,11 +22,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 xl:px-6 py-4">
 
         {/* Logo */}
-        <div className="text-sm lg:text-base xl:text-lg font-semibold tracking-wide whitespace-nowrap shrink-0">
-          Pedro P. Millán Mompó
-          <br />
-          P O R T F O L I O
-        </div>
+        <img
+          src={`${import.meta.env.BASE_URL}logo-pedro-millan.webp`}
+          alt="Pedro Millán Portfolio"
+          className="max-w-7xl mx-auto flex items-center justify-between pl-1 pr-4 xl:pl-2 xl:pr-6 py-4"
+        />
 
         {/* Menú desktop */}
         <div className="hidden lg:flex items-center gap-1 xl:gap-2 text-[11px] xl:text-sm min-w-0">
