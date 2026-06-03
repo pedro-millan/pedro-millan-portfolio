@@ -1,15 +1,5 @@
-// ================================================================
-//  PROYECTOS FRONTEND — Archivo de datos
-// ================================================================
-//  CÓMO AÑADIR UN NUEVO PROYECTO:
-//  1. Pon imágenes en /public
-//  2. Copia el bloque de Vulcan, edita los campos
-//  3. vimeoUrl → URL embed de Vimeo: https://player.vimeo.com/video/ID
-//  4. desktop.images → capturas escritorio | mobile.images → capturas móvil
-// ================================================================
 
 export interface ViewportMedia {
-  /** URL embed de Vimeo, p.ej. "https://player.vimeo.com/video/123456789" */
   vimeoUrl?: string;
   images: { src: string; alt: string }[];
 }
@@ -37,7 +27,7 @@ export const frontendProjects: FrontendProject[] = [
     thumbnail: "d1.webp",
     projectUrl: "https://pedro-millan.github.io/Vulcan/",
     desktop: {
-      vimeoUrl: "https://player.vimeo.com/video/XXXXXXXXX", // ← sustituye con el ID real
+      vimeoUrl: "https://vimeo.com/1198001651?fl=ip&fe=ec",
       images: [
         { src: "d1.webp",  alt: "Vista desktop 1"  },
         { src: "d2.webp",  alt: "Vista desktop 2"  },
@@ -52,7 +42,7 @@ export const frontendProjects: FrontendProject[] = [
       ],
     },
     mobile: {
-      vimeoUrl: "https://player.vimeo.com/video/YYYYYYYYY", // ← sustituye con el ID real
+      vimeoUrl: "https://vimeo.com/1198009167?fl=ip&fe=ec",
       images: [
         { src: "m1.webp", alt: "Vista móvil 1" },
         { src: "m2.webp", alt: "Vista móvil 2" },
