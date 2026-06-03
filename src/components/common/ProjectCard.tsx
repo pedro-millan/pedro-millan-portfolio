@@ -3,7 +3,7 @@ type ProjectCardProps = {
     description: string;
     tech: string[];
     github: string;
-    image: string; // ✅ Nueva propiedad
+    image: string; //
   };
   
   export default function ProjectCard({ title, description, tech, github, image }: ProjectCardProps) {

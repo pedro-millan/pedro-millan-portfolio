@@ -5,6 +5,7 @@ Este es mi portfolio profesional como desarrollador en formación (DAW) que cont
 Construido con **React + TypeScript + Vite**, estilado con **TailwindCSS** y animado con **Framer Motion**.
 
 ## Tech Stack
+
 - **React 18 + TypeScript**
 - **Vite** (bundler/dev server)
 - **TailwindCSS** (estilos utilitarios)
@@ -14,25 +15,15 @@ Construido con **React + TypeScript + Vite**, estilado con **TailwindCSS** y ani
 - **GitHub Actions** (CI) • **Vercel** (CD/Deploy)
 
 ## Características
+
 - Diseño responsive con un toque futurista y contemporáneo
 - Animaciones suaves y accesibles
 - Secciones: Home · Projects · About · Contact
 - Arquitectura **escalable por features**
 - Lista de proyectos desde GitHub
 
-##  Roadmap
-- [x] Bootstrap React + TS + Vite
-- [x] Tailwind + Framer Motion
-- [x] Router + arquitectura por features
-- [ ] Navbar/Layout base
-- [ ] Listar proyectos desde GitHub automáticamente
-- [ ] Projects con tarjetas y links a repos
-- [ ] Integración GitHub API (proyectos dinámicos)
-- [ ] SEO/OG Tags + Analytics
-- [ ] Form de contacto (EmailJS / backend)
-- [ ] Dark mode
-
 ## Desarrollo local
+
 ```bash
 # clonar si es necesario
 git clone git@github.com:pedro-millan/pedro-millan-portfolio.git
@@ -44,13 +35,15 @@ npm install
 # arrancar dev server
 npm run dev
 ```
+
 ## Deployment
+
 El proyecto será desplegado con Vercel y contará con CD automático (deploy en cada push a main).
 
 ## Contacto
+
 📧 Email: millanpedrop@gmail.com
 🔗 GitHub: https://github.com/pedro-millan
 🔗 LinkedIn: https://www.linkedin.com/in/pedro-pablo-millán-mompó-499a36377/
 
 💡 Proyecto en constante evolución — portfolio vivo 🚀
-
