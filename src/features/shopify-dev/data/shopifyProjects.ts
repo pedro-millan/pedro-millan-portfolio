@@ -1,3 +1,14 @@
+// ================================================================
+//  PROYECTOS SHOPIFY DEV — Archivo de datos
+// ================================================================
+//  description y longDescription son objetos { es, en }.
+//  Los componentes eligen el idioma activo automáticamente.
+// ================================================================
+
+export interface LocalizedText {
+  es: string;
+  en: string;
+}
 
 export interface ViewportMedia {
   vimeoUrl?: string;
@@ -7,8 +18,8 @@ export interface ViewportMedia {
 export interface ShopifyProject {
   id: string;
   title: string;
-  description: string;
-  longDescription?: string;
+  description: LocalizedText;
+  longDescription?: LocalizedText;
   tech: string[];
   thumbnail: string;
   projectUrl?: string;
@@ -21,9 +32,14 @@ export const shopifyProjects: ShopifyProject[] = [
   {
     id: "shutsami",
     title: "Shutsami",
-    description: "Desarrollo completo de tema Shopify personalizado.",
-    longDescription:
-      "Plataforma e-commerce para venta de productos orientales en Shopify, desarrollado a medida con secciones Liquid personalizadas, diseño responsive y optimización de conversión.",
+    description: {
+      es: "Desarrollo completo de tema Shopify personalizado.",
+      en: "Full custom Shopify theme development.",
+    },
+    longDescription: {
+      es: "Plataforma e-commerce para venta de productos orientales en Shopify, desarrollado a medida con secciones Liquid personalizadas, diseño responsive y optimización de conversión.",
+      en: "E-commerce platform for selling oriental products on Shopify, built to measure with custom Liquid sections, responsive design and conversion optimization.",
+    },
     tech: ["Shopify", "Liquid", "JavaScript", "CSS"],
     thumbnail: "1.webp",
     projectUrl: "https://shutsami.myshopify.com",
@@ -42,15 +58,15 @@ export const shopifyProjects: ShopifyProject[] = [
     mobile: {
       vimeoUrl: "https://player.vimeo.com/video/1198018452",
       images: [
-        { src: "1m.webp", alt: "Captura móvil 1" },
-        { src: "2m.webp", alt: "Captura móvil 2" },
-        { src: "3m.webp", alt: "Captura móvil 3" },
-        { src: "4m.webp", alt: "Captura móvil 4" },
-        { src: "5m.webp", alt: "Captura móvil 5" },
-        { src: "6m.webp", alt: "Captura móvil 6" },
-        { src: "7m.webp", alt: "Captura móvil 7" },
-        { src: "8m.webp", alt: "Captura móvil 8" },
-        { src: "9m.webp", alt: "Captura móvil 9" },
+        { src: "1m.webp",  alt: "Captura móvil 1"  },
+        { src: "2m.webp",  alt: "Captura móvil 2"  },
+        { src: "3m.webp",  alt: "Captura móvil 3"  },
+        { src: "4m.webp",  alt: "Captura móvil 4"  },
+        { src: "5m.webp",  alt: "Captura móvil 5"  },
+        { src: "6m.webp",  alt: "Captura móvil 6"  },
+        { src: "7m.webp",  alt: "Captura móvil 7"  },
+        { src: "8m.webp",  alt: "Captura móvil 8"  },
+        { src: "9m.webp",  alt: "Captura móvil 9"  },
         { src: "10m.webp", alt: "Captura móvil 10" },
         { src: "11m.webp", alt: "Captura móvil 11" },
         { src: "12m.webp", alt: "Captura móvil 12" },

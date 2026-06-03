@@ -4,8 +4,9 @@ import { webApps } from "./data/webApps";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import type { ViewportMedia } from "./data/webApps";
 
-function ViewportCard({ label, icon, isActive, onClick }: {
+function ViewportCard({ label, icon, isActive, onClick, selectedLabel, ctaLabel }: {
   label: string; icon: string; isActive: boolean; onClick: () => void;
+  selectedLabel: string; ctaLabel: string;
 }) {
   return (
     <button
@@ -21,7 +22,7 @@ function ViewportCard({ label, icon, isActive, onClick }: {
         {label}
       </span>
       <span className={`text-xs tracking-wide transition-colors ${isActive ? "text-primary/80" : "text-neutral-500 group-hover:text-neutral-300"}`}>
-        {isActive ? "✓ Seleccionado" : "Ver vídeo y capturas"}
+        {isActive ? selectedLabel : ctaLabel}
       </span>
     </button>
   );
@@ -29,10 +30,8 @@ function ViewportCard({ label, icon, isActive, onClick }: {
 
 function VimeoPlayer({ url }: { url: string }) {
   return (
-    <div
-      className="relative w-full rounded-2xl overflow-hidden border border-neutral-700 shadow-2xl shadow-black/60 bg-black"
-      style={{ paddingBottom: "56.25%" }}
-    >
+    <div className="relative w-full rounded-2xl overflow-hidden border border-neutral-700 shadow-2xl shadow-black/60 bg-black"
+      style={{ paddingBottom: "56.25%" }}>
       <iframe
         src={`${url}?autoplay=1&muted=1&loop=1&color=8b5cf6&title=0&byline=0&portrait=0&badge=0`}
         className="absolute inset-0 w-full h-full"
@@ -52,12 +51,8 @@ function ViewportGallery({ data }: { data: ViewportMedia }) {
       {data.images.length > 0 && (
         <div className="grid grid-cols-2 gap-4">
           {data.images.map((img, i) => (
-            <img
-              key={i}
-              src={`${import.meta.env.BASE_URL}${img.src}`}
-              alt={img.alt}
-              className="w-full rounded-xl border border-neutral-800 object-cover hover:border-primary/40 transition-colors duration-200"
-            />
+            <img key={i} src={`${import.meta.env.BASE_URL}${img.src}`} alt={img.alt}
+              className="w-full rounded-xl border border-neutral-800 object-cover hover:border-primary/40 transition-colors duration-200" />
           ))}
         </div>
       )}
@@ -67,8 +62,9 @@ function ViewportGallery({ data }: { data: ViewportMedia }) {
 
 export default function WebAppDetail() {
   const { id } = useParams<{ id: string }>();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const wa = t.webApps;
+  const ui = t.common;
   const app = webApps.find((a) => a.id === id);
   const [activeView, setActiveView] = useState<"desktop" | "mobile" | null>(null);
 
@@ -83,10 +79,8 @@ export default function WebAppDetail() {
 
   return (
     <section className="container-max py-20 max-w-4xl mx-auto px-4">
-      <Link
-        to="/web-apps"
-        className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-primary transition mb-10"
-      >
+      <Link to="/web-apps"
+        className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-primary transition mb-10">
         {wa.backLink}
       </Link>
 
@@ -99,39 +93,31 @@ export default function WebAppDetail() {
       </div>
 
       {app.longDescription && (
-        <p className="text-neutral-300 leading-relaxed mb-8 text-lg">{app.longDescription}</p>
+        <p className="text-neutral-300 leading-relaxed mb-8 text-lg">{app.longDescription[lang]}</p>
       )}
 
       {app.projectUrl && (
-        <a
-          href={app.projectUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mb-12 px-6 py-3 border border-primary text-primary rounded-xl hover:bg-primary hover:text-black transition font-semibold"
-        >
-          {wa.liveProject}
+        <a href={app.projectUrl} target="_blank" rel="noopener noreferrer"
+          className="inline-block mb-12 px-6 py-3 border border-primary text-primary rounded-xl hover:bg-primary hover:text-black transition font-semibold">
+          {wa.knowApp}
         </a>
       )}
 
       {(app.desktop || app.mobile) && (
         <div>
-          <p className="text-xs font-semibold text-neutral-500 mb-5 tracking-widest uppercase">Vista del Proyecto</p>
+          <p className="text-xs font-semibold text-neutral-500 mb-5 tracking-widest uppercase">{ui.viewportSection}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {app.desktop && (
-              <ViewportCard
-                label="Desktop"
-                icon="🖥️"
+              <ViewportCard label="Desktop" icon="🖥️"
                 isActive={activeView === "desktop"}
                 onClick={() => setActiveView(activeView === "desktop" ? null : "desktop")}
-              />
+                selectedLabel={ui.viewportSelected} ctaLabel={ui.viewportCta} />
             )}
             {app.mobile && (
-              <ViewportCard
-                label="Móvil"
-                icon="📱"
+              <ViewportCard label={ui.mobileLabel} icon="📱"
                 isActive={activeView === "mobile"}
                 onClick={() => setActiveView(activeView === "mobile" ? null : "mobile")}
-              />
+                selectedLabel={ui.viewportSelected} ctaLabel={ui.viewportCta} />
             )}
           </div>
           {activeView === "desktop" && app.desktop && <ViewportGallery data={app.desktop} />}

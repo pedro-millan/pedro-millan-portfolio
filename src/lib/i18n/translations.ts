@@ -12,6 +12,12 @@ export const translations = {
       contact: "CONTACTO",
     },
     footer: "Todos los derechos reservados.",
+    common: {
+      viewportSection: "Vista del Proyecto",
+      viewportSelected: "✓ Seleccionado",
+      viewportCta: "Ver vídeo y capturas",
+      mobileLabel: "Móvil",
+    },
     home: {
       greeting: "Hola, soy",
       subtitle: "Técnico Superior en Desarrollo de Aplicaciones Web",
@@ -54,7 +60,7 @@ export const translations = {
       note: "Haz clic en cualquier proyecto para navegar por él, conocer sus detalles y ver capturas y vídeos.",
       empty: "Próximamente se añadirán proyectos a esta sección.",
       backLink: "← Volver a Aplicaciones Web",
-      liveProject: "Ver proyecto en vivo →",
+      knowApp: "Conoce la aplicación →",
       gallery: "Galería",
       notFound: "Proyecto no encontrado",
     },
@@ -104,6 +110,12 @@ export const translations = {
       contact: "CONTACT",
     },
     footer: "All rights reserved.",
+    common: {
+      viewportSection: "Project Preview",
+      viewportSelected: "✓ Selected",
+      viewportCta: "View video & screenshots",
+      mobileLabel: "Mobile",
+    },
     home: {
       greeting: "Hi, I'm",
       subtitle: "Higher Technician in Web Application Development",
@@ -146,7 +158,7 @@ export const translations = {
       note: "Click on any project to explore it, discover its details and view screenshots and videos.",
       empty: "Projects will be added to this section soon.",
       backLink: "← Back to Web Apps",
-      liveProject: "View live project →",
+      knowApp: "Explore the app →",
       gallery: "Gallery",
       notFound: "Project not found",
     },

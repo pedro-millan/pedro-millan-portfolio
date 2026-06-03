@@ -1,3 +1,14 @@
+// ================================================================
+//  PROYECTOS FRONTEND — Archivo de datos
+// ================================================================
+//  description y longDescription son objetos { es, en }.
+//  Los componentes eligen el idioma activo automáticamente.
+// ================================================================
+
+export interface LocalizedText {
+  es: string;
+  en: string;
+}
 
 export interface ViewportMedia {
   vimeoUrl?: string;
@@ -7,8 +18,8 @@ export interface ViewportMedia {
 export interface FrontendProject {
   id: string;
   title: string;
-  description: string;
-  longDescription?: string;
+  description: LocalizedText;
+  longDescription?: LocalizedText;
   tech: string[];
   thumbnail: string;
   projectUrl?: string;
@@ -20,14 +31,19 @@ export const frontendProjects: FrontendProject[] = [
   {
     id: "vulcan",
     title: "Vulcan",
-    description: "Landing page con diseño futurista, animaciones CSS y diseño totalmente responsive.",
-    longDescription:
-      "Vulcan es una landing page de diseño futurista desarrollada con HTML5, CSS3 y JavaScript. Incluye animaciones CSS avanzadas, scroll reveal, paleta oscura con acentos violeta y una experiencia de usuario inmersiva tanto en escritorio como en móvil.",
+    description: {
+      es: "Elegancia, branding robusto e innovación de proceso en el producto.",
+      en: "Elegance, strong branding and process innovation in the product.",
+    },
+    longDescription: {
+      es: "El website de Vulcan hace justicia a su línea de cosméticos de procedencia volcánica y sostenible. Es una landing page con clase y contenido cautivadores, desarrollada con HTML5, CSS3 y JavaScript. Incluye animaciones CSS avanzadas, scroll reveal, 4 colores corporativos concretos y una experiencia de usuario inmersiva tanto en escritorio como en móvil.",
+      en: "The Vulcan website does justice to its line of volcanic and sustainable cosmetics. It is a landing page with captivating style and content, developed with HTML5, CSS3 and JavaScript. It includes advanced CSS animations, scroll reveal, 4 specific brand colors and an immersive user experience on both desktop and mobile.",
+    },
     tech: ["HTML5", "CSS3", "JavaScript"],
     thumbnail: "d1.webp",
     projectUrl: "https://pedro-millan.github.io/Vulcan/",
     desktop: {
-      vimeoUrl: "https://player.vimeo.com/video/1198001651?",
+      vimeoUrl: "https://player.vimeo.com/video/1198001651",
       images: [
         { src: "d1.webp",  alt: "Vista desktop 1"  },
         { src: "d2.webp",  alt: "Vista desktop 2"  },

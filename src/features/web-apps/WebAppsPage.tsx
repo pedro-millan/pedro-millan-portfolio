@@ -3,7 +3,7 @@ import { webApps } from "./data/webApps";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function WebAppsPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const wa = t.webApps;
 
   return (
@@ -27,7 +27,7 @@ export default function WebAppsPage() {
               key={app.id}
               id={app.id}
               title={app.title}
-              description={app.description}
+              description={app.description[lang]}
               tech={app.tech}
               thumbnail={app.thumbnail}
               basePath="/web-apps"

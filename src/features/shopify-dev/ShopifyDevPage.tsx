@@ -3,7 +3,7 @@ import { shopifyProjects } from "./data/shopifyProjects";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function ShopifyDevPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const sd = t.shopifyDev;
 
   return (
@@ -27,7 +27,7 @@ export default function ShopifyDevPage() {
               key={project.id}
               id={project.id}
               title={project.title}
-              description={project.description}
+              description={project.description[lang]}
               tech={project.tech}
               thumbnail={project.thumbnail}
               basePath="/shopify-dev"

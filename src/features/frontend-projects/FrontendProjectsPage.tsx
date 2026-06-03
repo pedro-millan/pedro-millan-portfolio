@@ -3,7 +3,7 @@ import { frontendProjects } from "./data/frontendProjects";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function FrontendProjectsPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const fp = t.frontendProjects;
 
   return (
@@ -27,7 +27,7 @@ export default function FrontendProjectsPage() {
               key={project.id}
               id={project.id}
               title={project.title}
-              description={project.description}
+              description={project.description[lang]}
               tech={project.tech}
               thumbnail={project.thumbnail}
               basePath="/frontend-projects"
