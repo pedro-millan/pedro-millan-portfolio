@@ -27,7 +27,7 @@ export const frontendProjects: FrontendProject[] = [
     thumbnail: "d1.webp",
     projectUrl: "https://pedro-millan.github.io/Vulcan/",
     desktop: {
-      vimeoUrl: "https://vimeo.com/1198001651?fl=ip&fe=ec",
+      vimeoUrl: "https://player.vimeo.com/video/1198001651?",
       images: [
         { src: "d1.webp",  alt: "Vista desktop 1"  },
         { src: "d2.webp",  alt: "Vista desktop 2"  },
@@ -42,7 +42,7 @@ export const frontendProjects: FrontendProject[] = [
       ],
     },
     mobile: {
-      vimeoUrl: "https://vimeo.com/1198009167?fl=ip&fe=ec",
+      vimeoUrl: "https://vimeo.com/1198009167?share=copy&fl=sv&fe=ci",
       images: [
         { src: "m1.webp", alt: "Vista móvil 1" },
         { src: "m2.webp", alt: "Vista móvil 2" },
