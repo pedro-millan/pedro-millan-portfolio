@@ -10,6 +10,7 @@ export default function Navbar() {
   const links = [
     { to: "/", label: t.nav.home },
     { to: "/frontend-projects", label: t.nav.frontend },
+    { to: "/web-apps", label: t.nav.webApps },
     { to: "/shopify-dev", label: t.nav.shopify },
     { to: "/projects", label: t.nav.projects },
     { to: "/about", label: t.nav.about },
