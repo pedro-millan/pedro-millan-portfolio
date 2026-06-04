@@ -18,13 +18,13 @@ function Particles() {
     resize();
     window.addEventListener("resize", resize);
 
-    const particles = Array.from({ length: 72 }, () => ({
+    const particles = Array.from({ length: 110 }, () => ({
       x:  Math.random() * canvas.width,
       y:  Math.random() * canvas.height,
       vx: (Math.random() - 0.5) * 0.22,
       vy: (Math.random() - 0.5) * 0.22,
-      r:  Math.random() * 1.2 + 0.4,
-      a:  Math.random() * 0.3 + 0.07,
+      r:  Math.random() * 1.8 + 0.6,
+      a:  Math.random() * 0.45 + 0.15,
     }));
 
     let raf: number;
@@ -98,7 +98,7 @@ export default function HomePage() {
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)",
+            "linear-gradient(rgba(139,92,246,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.07) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />
