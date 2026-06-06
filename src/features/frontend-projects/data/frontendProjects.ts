@@ -20,6 +20,8 @@ export interface FrontendProject {
   mobile?: ViewportMedia;
 }
 
+
+//===========================VULCAN==========================
 export const frontendProjects: FrontendProject[] = [
   {
     id: "vulcan",
@@ -59,6 +61,52 @@ export const frontendProjects: FrontendProject[] = [
         { src: "m4.webp", alt: "Vista móvil 4" },
         { src: "m5.webp", alt: "Vista móvil 5" },
         { src: "m6.webp", alt: "Vista móvil 6" },
+      ],
+    },
+  },
+
+
+
+//===========================BOGGO FRESH BAGEL==========================
+
+  {
+    id: "boggo",
+    title: "Boggo",
+    description: {
+      es: "Website temático para un restaurante innovador.",
+      en: "Themed website for an innovative restaurant.",
+    },
+    longDescription: {
+      es: "Boggo Fresh Bagel es una web estática desarrollada para un restaurante ficticio especializado en bagels, con una identidad visual inspirada en los diners americanos de los años 50. El proyecto presenta una experiencia colorida, divertida y responsive, incluyendo una home con vídeo y animaciones, carta de productos por categorías, formulario de reserva de mesa, Club Boggo con sistema de puntos y páginas informativas complementarias.",
+      en: "Boggo Fresh Bagel is a static website developed for a fictional restaurant specialized in bagels, with a visual identity inspired by 1950s American diners. The project offers a colorful, playful and responsive experience, including a home page with video and animations, a product menu organized by categories, a table reservation form, Club Boggo with a points system, and additional informational pages.",
+    },
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    thumbnail: "boggo_desktop/1d.webp",
+    projectUrl: "https://pedro-millan.github.io/Boggo/",
+    desktop: {
+      vimeoUrl: "https://www.youtube-nocookie.com/embed/GHIZgBopRMY",
+      images: [
+        { src: "boggo_desktop/1d.webp",  alt: "Vista desktop 1"  },
+        { src: "boggo_desktop/2d.webp",  alt: "Vista desktop 2"  },
+        { src: "boggo_desktop/3d.webp",  alt: "Vista desktop 3"  },
+        { src: "boggo_desktop/4d.webp",  alt: "Vista desktop 4"  },
+        { src: "boggo_desktop/5d.webp",  alt: "Vista desktop 5"  },
+        { src: "boggo_desktop/6d.webp",  alt: "Vista desktop 6"  },
+        { src: "boggo_desktop/7d.webp",  alt: "Vista desktop 7"  },
+        { src: "boggo_desktop/8d.webp",  alt: "Vista desktop 8"  },
+        { src: "boggo_desktop/9d.webp",  alt: "Vista desktop 9"  },
+        { src: "boggo_desktop/10d.webp", alt: "Vista desktop 10" },
+      ],
+    },
+    mobile: {
+      vimeoUrl: "https://www.youtube-nocookie.com/embed/tT38cH-R6LY" ,
+      images: [
+        { src: "boggo_movil/1m.webp", alt: "Vista móvil 1" },
+        { src: "boggo_movil/2m.webp", alt: "Vista móvil 2" },
+        { src: "boggo_movil/3m.webp", alt: "Vista móvil 3" },
+        { src: "boggo_movil/4m.webp", alt: "Vista móvil 4" },
+        { src: "boggo_movil/5m.webp", alt: "Vista móvil 5" },
+        { src: "boggo_movil/6m.webp", alt: "Vista móvil 6" },
       ],
     },
   },
