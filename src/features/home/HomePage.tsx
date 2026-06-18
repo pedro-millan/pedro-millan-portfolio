@@ -251,18 +251,18 @@ export default function HomePage() {
     <div className="bg-neutral-950 text-white">
       <section className="relative overflow-hidden bg-neutral-950 pt-20 md:pt-24 xl:min-h-screen">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_55%_at_80%_36%,rgba(255,255,255,0.13),transparent_100%),linear-gradient(90deg,rgba(0,0,0,0.96)_0%,rgba(0,0,0,0.86)_45%,rgba(0,0,0,0.30)_100%)]" />
-        <div className="absolute bottom-10 left-0 right-0 hidden select-none whitespace-nowrap text-[10vw] font-black leading-none tracking-[-0.08em] text-white/[0.055] md:block">
-          Pedro Millán · Portfolio
-        </div>
 
         {/* Foto de fondo a pantalla completa — solo desktop ancho (xl+), donde hay hueco de sobra */}
-        <div className="fade-sides-bottom absolute bottom-0 right-0 top-4 hidden w-[34vw] overflow-hidden xl:top-6 xl:block xl:right-36">
+        <div className="fade-sides-bottom absolute inset-y-0 right-0 hidden w-[34vw] overflow-hidden xl:block xl:right-36">
           <img
             src={`${base}yo-smile-final-2.webp`}
             alt="Pedro P. Millán Mompó"
-            className="h-full w-full scale-110 object-contain object-top"
+            className="h-full w-full scale-125 object-contain object-top opacity-75"
             loading="eager"
           />
+        </div>
+        <div className="absolute bottom-10 left-0 right-0 z-[1] hidden select-none whitespace-nowrap text-[10vw] font-black leading-none tracking-[-0.08em] text-white/[0.055] md:block">
+          Pedro Millán · Portfolio
         </div>
         {/* Foto a ancho completo, detrás del texto, con parallax — mobile y tablet (< xl) */}
         <div ref={heroPhotoRef} className="hero-portrait absolute inset-x-0 -top-10 h-[58vh] max-h-[460px] will-change-transform md:-top-6 md:left-[28rem] xl:hidden">
