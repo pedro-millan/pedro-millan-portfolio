@@ -256,26 +256,26 @@ export default function HomePage() {
         </div>
 
         {/* Foto de fondo a pantalla completa — solo desktop ancho (xl+), donde hay hueco de sobra */}
-        <div className="hero-portrait absolute bottom-0 right-0 top-20 hidden w-[34vw] xl:top-24 xl:block xl:right-4">
+        <div className="fade-sides-bottom absolute bottom-0 right-0 top-4 hidden w-[34vw] overflow-hidden xl:top-6 xl:block xl:right-36">
           <img
-            src={`${base}yo-smile.webp`}
+            src={`${base}yo-smile-final-2.webp`}
             alt="Pedro P. Millán Mompó"
-            className="h-full w-full object-contain object-top"
+            className="h-full w-full scale-110 object-contain object-top"
             loading="eager"
           />
         </div>
         {/* Foto a ancho completo, detrás del texto, con parallax — mobile y tablet (< xl) */}
-        <div ref={heroPhotoRef} className="hero-portrait absolute inset-x-0 top-20 h-[58vh] max-h-[460px] will-change-transform xl:hidden">
+        <div ref={heroPhotoRef} className="hero-portrait absolute inset-x-0 -top-10 h-[58vh] max-h-[460px] will-change-transform md:-top-6 md:left-[28rem] xl:hidden">
           <img
-            src={`${base}yo-smile.webp`}
+            src={`${base}yo-smile-final-2.webp`}
             alt="Pedro P. Millán Mompó"
-            className="h-full w-full object-cover object-[center_30%] opacity-25"
+            className="h-full w-full object-cover object-[center_30%] opacity-50 md:opacity-70"
             loading="eager"
           />
         </div>
         <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-neutral-950 to-transparent" />
 
-        <div className="container-max relative z-10 flex flex-col py-10 md:py-12 xl:min-h-[calc(100vh-6rem)] xl:justify-between">
+        <div className="container-max relative z-10 flex flex-col py-10 md:py-12 xl:min-h-[calc(100vh-6rem)] xl:w-full xl:max-w-none xl:mx-0 xl:justify-between xl:px-16">
 
           <div className="max-w-4xl pb-10 pt-10 sm:pt-14 md:max-w-3xl md:pt-16 xl:pt-20 xl:pb-16">
             <h1 className="hero-display max-w-5xl break-words text-[clamp(2.75rem,10vw,10rem)] font-semibold leading-[0.86] tracking-[-0.085em] text-white">

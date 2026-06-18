@@ -179,67 +179,67 @@ export default function AboutPage() {
 
       ctaTitle: "Looking for a junior Web Developer with visual judgement, consistency and a full-stack foundation?",
       ctaButton: "Contact me",
-      blocks: [] as SkillBlock[],
-      certifications: [] as Certification[],
+      blocks: [
+        {
+          title: "Frontend & Interface Development",
+          description: "I build responsive interfaces with React, Vite, JavaScript, TypeScript, HTML5 and CSS3, taking care of components, visual hierarchy, animations, accessibility and user experience.",
+          icons: [
+            { src: si("html5", "E34F26"), alt: "HTML5" },
+            { src: `${base}css3-logo.png`, alt: "CSS3" },
+            { src: si("javascript", "F7DF1E"), alt: "JavaScript" },
+            { src: si("typescript", "3178C6"), alt: "TypeScript" },
+            { src: si("react", "61DAFB"), alt: "React" },
+          ],
+          tags: ["React", "Vite", "Next.js", "JavaScript", "TypeScript", "HTML5", "CSS3"],
+          icon: <Code2 size={26} />,
+        },
+        {
+          title: "Shopify, e-commerce & applications",
+          description: "I customize themes, sections and store structures with Liquid and Shopify CLI. I also develop Shopify tools and applications aimed at improving store, product and conversion experiences.",
+          icons: [{ src: si("shopify", "95BF47"), alt: "Shopify" }, { src: `${base}liquid-logo.png`, alt: "Liquid" }],
+          tags: ["Shopify", "Liquid", "Shopify CLI", "Theme Customization", "Collections", "Shopify Apps"],
+          icon: <ShoppingBag size={26} />,
+        },
+        {
+          title: "Backend, APIs & server logic",
+          description: "I have developed endpoints, functional forms, REST APIs, processing logic and programming projects with FastAPI, PHP, Node.js, Java, Python and databases.",
+          icons: [{ src: si("fastapi", "009688"), alt: "FastAPI" }, { src: si("nodedotjs", "5FA04E"), alt: "Node.js" }, { src: si("php", "777BB4"), alt: "PHP" }, { src: si("python", "3776AB"), alt: "Python" }, { src: di("java"), alt: "Java" }],
+          tags: ["FastAPI", "Node.js", "Java", "PHP", "REST APIs", "Python", "MariaDB"],
+          icon: <Server size={26} />,
+        },
+        {
+          title: "Databases & persistence",
+          description: "I design schemas, relationships, SQL queries and backend connections to store dynamic content, users, activities or application data.",
+          icons: [{ src: si("mysql", "4479A1"), alt: "MySQL" }, { src: si("mariadb", "003545"), alt: "MariaDB" }],
+          tags: ["MariaDB", "MySQL", "SQL", "CRUD", "Modeling"],
+          icon: <Database size={26} />,
+        },
+        {
+          title: "Visual design & web branding",
+          description: "I combine development with visual judgement: composition, typography, color, hierarchy and graphic assets. Photoshop and Premiere reinforce my ability to create professional visual identities.",
+          icons: [{ src: `${base}photoshop-logo.png`, alt: "Adobe Photoshop" }, { src: `${base}premiere-logo.png`, alt: "Adobe Premiere Pro" }, { src: `${base}mag.webp`, alt: "Magnific" }],
+          tags: ["UI", "Responsive", "Branding", "Photoshop", "Premiere", "Visual identity"],
+          icon: <Palette size={26} />,
+        },
+        {
+          title: "Professional workflow with Git, deployment & AI",
+          description: "I work with GitHub, Vercel, VS Code and AI tools. I use Claude Code natively together with PonyTail to optimize code efficiency, review changes and speed up my development workflow.",
+          icons: [{ src: si("git", "F05032"), alt: "Git" }, { src: si("github", "181717"), alt: "GitHub" }, { src: `${base}OpenAI.png`, alt: "OpenAI" }, { src: `${base}claude-pro.png`, alt: "Claude" }, { src: `${base}ponytail.png`, alt: "PonyTail" }],
+          tags: ["Git", "GitHub", "Vercel", "VS Code", "Claude Code", "PonyTail"],
+          icon: <Wrench size={26} />,
+        },
+      ] as SkillBlock[],
+      certifications: [
+        { title: "PCAP · Certified Associate Python Programmer", subtitle: "Object-oriented programming, modules, exceptions, files and advanced Python fundamentals.", badge: "certi.webp" },
+        { title: "PCEP · Certified Entry-Level Python Programmer", subtitle: "Python fundamentals, control flow, functions, collections and basic programming logic.", badge: "pcepcertif.webp" },
+        { title: "Introduction to Cybersecurity · Cisco", subtitle: "Cybersecurity fundamentals, threats, organizational protection and digital best practices.", badge: "ciber.webp" },
+        { title: "NDG Linux Unhatched · Cisco Networking Academy", subtitle: "Introduction to Linux, command line and operating system foundations for IT profiles.", badge: "linux.webp" },
+      ] as Certification[],
     },
   }[lang];
 
-  const spanishBlocks = (lang === "es" ? content.blocks : [
-    {
-      title: "Frontend & Interface Development",
-      description: "I build responsive interfaces with React, Vite, JavaScript, TypeScript, HTML5 and CSS3, taking care of components, visual hierarchy, animations, accessibility and user experience.",
-      icons: [
-        { src: si("html5", "E34F26"), alt: "HTML5" },
-        { src: `${base}css3-logo.png`, alt: "CSS3" },
-        { src: si("javascript", "F7DF1E"), alt: "JavaScript" },
-        { src: si("typescript", "3178C6"), alt: "TypeScript" },
-        { src: si("react", "61DAFB"), alt: "React" },
-      ],
-      tags: ["React", "Vite", "Next.js", "JavaScript", "TypeScript", "HTML5", "CSS3"],
-      icon: <Code2 size={26} />,
-    },
-    {
-      title: "Shopify, e-commerce & applications",
-      description: "I customize themes, sections and store structures with Liquid and Shopify CLI. I also develop Shopify tools and applications aimed at improving store, product and conversion experiences.",
-      icons: [{ src: si("shopify", "95BF47"), alt: "Shopify" }, { src: `${base}liquid-logo.png`, alt: "Liquid" }],
-      tags: ["Shopify", "Liquid", "Shopify CLI", "Theme Customization", "Collections", "Shopify Apps"],
-      icon: <ShoppingBag size={26} />,
-    },
-    {
-      title: "Backend, APIs & server logic",
-      description: "I have developed endpoints, functional forms, REST APIs, processing logic and programming projects with FastAPI, PHP, Node.js, Java, Python and databases.",
-      icons: [{ src: si("fastapi", "009688"), alt: "FastAPI" }, { src: si("nodedotjs", "5FA04E"), alt: "Node.js" }, { src: si("php", "777BB4"), alt: "PHP" }, { src: si("python", "3776AB"), alt: "Python" }, { src: di("java"), alt: "Java" }],
-      tags: ["FastAPI", "Node.js", "Java", "PHP", "REST APIs", "Python", "MariaDB"],
-      icon: <Server size={26} />,
-    },
-    {
-      title: "Databases & persistence",
-      description: "I design schemas, relationships, SQL queries and backend connections to store dynamic content, users, activities or application data.",
-      icons: [{ src: si("mysql", "4479A1"), alt: "MySQL" }, { src: si("mariadb", "003545"), alt: "MariaDB" }],
-      tags: ["MariaDB", "MySQL", "SQL", "CRUD", "Modeling"],
-      icon: <Database size={26} />,
-    },
-    {
-      title: "Visual design & web branding",
-      description: "I combine development with visual judgement: composition, typography, color, hierarchy and graphic assets. Photoshop and Premiere reinforce my ability to create professional visual identities.",
-      icons: [{ src: `${base}photoshop-logo.png`, alt: "Adobe Photoshop" }, { src: `${base}premiere-logo.png`, alt: "Adobe Premiere Pro" }, { src: `${base}mag.webp`, alt: "Magnific" }],
-      tags: ["UI", "Responsive", "Branding", "Photoshop", "Premiere", "Visual identity"],
-      icon: <Palette size={26} />,
-    },
-    {
-      title: "Professional workflow with Git, deployment & AI",
-      description: "I work with GitHub, Vercel, VS Code and AI tools. I use Claude Code natively together with PonyTail to optimize code efficiency, review changes and speed up my development workflow.",
-      icons: [{ src: si("git", "F05032"), alt: "Git" }, { src: si("github", "181717"), alt: "GitHub" }, { src: `${base}OpenAI.png`, alt: "OpenAI" }, { src: `${base}claude-pro.png`, alt: "Claude" }, { src: `${base}ponytail.png`, alt: "PonyTail" }],
-      tags: ["Git", "GitHub", "Vercel", "VS Code", "Claude Code", "PonyTail"],
-      icon: <Wrench size={26} />,
-    },
-  ]) as SkillBlock[];
-  const certifications = lang === "es" ? content.certifications : [
-    { title: "PCAP · Certified Associate Python Programmer", subtitle: "Object-oriented programming, modules, exceptions, files and advanced Python fundamentals.", badge: "certi.webp" },
-    { title: "PCEP · Certified Entry-Level Python Programmer", subtitle: "Python fundamentals, control flow, functions, collections and basic programming logic.", badge: "pcepcertif.webp" },
-    { title: "Introduction to Cybersecurity · Cisco", subtitle: "Cybersecurity fundamentals, threats, organizational protection and digital best practices.", badge: "ciber.webp" },
-    { title: "NDG Linux Unhatched · Cisco Networking Academy", subtitle: "Introduction to Linux, command line and operating system foundations for IT profiles.", badge: "linux.webp" },
-  ];
+  const spanishBlocks = content.blocks as SkillBlock[];
+  const certifications = content.certifications as Certification[];
 
   return (
     <div className="bg-white text-neutral-950">

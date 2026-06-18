@@ -111,15 +111,27 @@
   pointer-events: none;
   -webkit-mask-image:
     linear-gradient(to right, transparent 0%, black 20%, black 82%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 8%, black 62%, transparent 100%);
+    linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%);
   mask-image:
     linear-gradient(to right, transparent 0%, black 20%, black 82%, transparent 100%),
-    linear-gradient(to bottom, transparent 0%, black 8%, black 62%, transparent 100%);
+    linear-gradient(to bottom, transparent 0%, black 8%, black 85%, transparent 100%);
   -webkit-mask-composite: destination-in;
   mask-composite: intersect;
 }
 .hero-portrait img {
   filter: grayscale(1);
+}
+
+.fade-sides-bottom {
+  pointer-events: none;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%),
+    linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
+  mask-image:
+    linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%),
+    linear-gradient(to bottom, black 0%, black 75%, transparent 100%);
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
 }
 
 @layer components {

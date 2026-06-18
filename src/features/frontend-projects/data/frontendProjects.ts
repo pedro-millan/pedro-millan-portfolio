@@ -1,12 +1,5 @@
-export interface LocalizedText {
-  es: string;
-  en: string;
-}
-
-export interface ViewportMedia {
-  vimeoUrl?: string;
-  images: { src: string; alt: string }[];
-}
+import type { LocalizedText, ViewportMedia } from "@/lib/types";
+export type { ViewportMedia };
 
 export interface FrontendProject {
   id: string;
