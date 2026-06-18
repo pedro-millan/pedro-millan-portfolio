@@ -79,7 +79,7 @@ export default function AboutPage() {
       skillsIntro:
         "He reorganizado mi stack para mostrar no solo qué tecnologías conozco, sino dónde las aplico y qué tipo de resultado puedo aportar en un equipo.",
       certificationsIntro: "Certificaciones que respaldan mi base técnica y mi compromiso con el aprendizaje continuo.",
-      ctaKicker: "Disponible para nuevas oportunidades.",
+
       ctaTitle: "¿Buscas un Web Developer junior con criterio visual, constancia y base full stack?",
       ctaButton: "Contáctame",
       blocks: [
@@ -176,7 +176,7 @@ export default function AboutPage() {
       skillsIntro:
         "I have reorganized my stack to show not only which technologies I know, but where I apply them and what kind of outcome I can contribute to a team.",
       certificationsIntro: "Certifications that support my technical foundation and commitment to continuous learning.",
-      ctaKicker: "Available for new opportunities.",
+
       ctaTitle: "Looking for a junior Web Developer with visual judgement, consistency and a full-stack foundation?",
       ctaButton: "Contact me",
       blocks: [] as SkillBlock[],
@@ -246,7 +246,7 @@ export default function AboutPage() {
       <section className="border-b border-neutral-200 py-28 md:py-36">
         <div className="container-max reveal-up mx-auto max-w-5xl text-center">
           <p className="mb-6 text-sm uppercase tracking-[0.28em] text-neutral-500">{content.kicker}</p>
-          <p className="whitespace-pre-line text-xl leading-9 text-neutral-700 md:text-2xl md:leading-10">{content.intro}</p>
+          <p className="whitespace-pre-line text-base leading-7 text-neutral-700 md:text-2xl md:leading-10">{content.intro}</p>
         </div>
       </section>
 

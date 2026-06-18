@@ -27,7 +27,10 @@ function RevealOnScroll() {
 function GlobalCTA() {
   const { lang } = useLanguage();
   const { pathname } = useLocation();
-  const alreadyHasCta = ["/", "/about", "/contact", "/frontend-projects", "/shopify-dev", "/web-apps", "/projects"].includes(pathname);
+  const alreadyHasCta = [
+    "/", "/about", "/contact", "/frontend-projects", "/shopify-dev", "/web-apps", "/projects",
+    "/frontend-projects/vulcan", "/frontend-projects/boggo", "/shopify-dev/shutsami", "/web-apps/lowfator",
+  ].includes(pathname);
   if (alreadyHasCta) return null;
 
   return (

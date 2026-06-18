@@ -21,12 +21,12 @@ export const translations = {
     home: {
       greeting: "Hola, soy",
       subtitle: "Técnico Superior en Desarrollo de Aplicaciones Web",
-      desc1: "Especializado en soluciones web para empresas de cualquier sector, creación y optimización de plataformas e-commerce en",
+      desc1: "Como Técnico Superior en Desarrollo de Aplicaciones Web me especializo en soluciones web para empresas de cualquier sector, creación y optimización de plataformas e-commerce en",
       desc1em: "Shopify",
-      desc2: " y desarrollo de herramientas en línea, aplicaciones y soluciones para Shopify.",
+      desc2: " y desarrollo de herramientas en línea, así como aplicaciones y soluciones tanto en ámbito web como en ecosistema Shopify.",
       desc3: "Mis conocimientos en",
-      desc3strong: " frontend, creación de contenido gráfico, uso de herramientas basadas en IA y backend",
-      desc4: "me permiten alcanzar grandes resultados en tiempos reducidos y optimizar el escalado de proyectos de todo tipo.",
+      desc3strong: " frontend, backend, uso de IA agéntica y creación de contenido gráfico,",
+      desc4: "me permiten alcanzar grandes resultados en tiempos reducidos y optimizar tanto el escalado de proyectos de todo tipo como su mantenimiento.",
       cta: "Puedes encontrar más sobre mis proyectos y perfil profesional clicando abajo:",
     },
     projects: {
@@ -119,12 +119,12 @@ export const translations = {
     home: {
       greeting: "Hi, I'm",
       subtitle: "Higher Technician in Web Application Development",
-      desc1: "Specialized in web solutions for business across any sector, creation and optimization of e-commerce platforms on",
+      desc1: "As Advanced Technician in Web Application Development I specialize in web solutions for business across any sector, creation and optimization of e-commerce platforms on",
       desc1em: "Shopify",
-      desc2: "and development of online tools, Shopify apps and business-oriented solutions.",
+      desc2: "and development of online tools, apps and business-oriented solutions both in the web environment and in the Shopify ecosystem.",
       desc3: "My knowledge in",
-      desc3strong: "frontend, graphic content creation, AI-based tools and backend",
-      desc4: "allows me to achieve strong results in reduced timeframes and optimize the scalability of all kinds of projects.",
+      desc3strong: "frontend, backend, use of agentic AI and graphic content creation",
+      desc4: "allows me to achieve strong results in reduced timeframes and optimize both the scalability of all kinds of projects and their maintenance.",
       cta: "You can find more about my projects and professional profile below:",
     },
     projects: {

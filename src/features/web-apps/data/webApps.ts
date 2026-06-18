@@ -33,7 +33,7 @@ export const webApps: WebApp[] = [
       en: "Designed for creative audio processing. Lets users experiment with textures and effects to modulate their uploaded audio file.",
     },
     tech: ["React", "Python", "TypeScript", "Tailwind", "FastAPI", "Wavesurfer.js", "JavaScript", "HTML", "CSS", "Uvicorn"],
-    thumbnail: "lf1.webp",
+    thumbnail: "lowfator-miniatura.webp",
     projectUrl: "https://github.com/pedro-millan/LowFator",
     desktop: {
       vimeoUrl: "https://player.vimeo.com/video/1198095820",
