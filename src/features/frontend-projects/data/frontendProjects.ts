@@ -14,8 +14,52 @@ export interface FrontendProject {
 }
 
 
-//===========================VULCAN==========================
 export const frontendProjects: FrontendProject[] = [
+
+    //===========================SANTA PAPA==========================
+    {
+      id: "santa-papa",
+      title: "Santa Papa",
+      description: {
+        es: "Sutileza en un universo de marca diferenciadora donde la interactividad y el dinamismo caracterizan su sitio web.",
+        en: "Subtlety in a universe of distinctive branding where interactivity and dynamism characterize its website.",
+      },
+      longDescription: {
+        es: "La landing page de la marca de snacks gourmet Santa Papa bebe de la mezcla de pinceladas elegantes, satíricas y atrevidas que la caracterizan. Ha sido desarrollada contando con Next.js y React como base, una capa de Tailwind CSS que complementa el CSS personalizado, animaciones interactivas con GSAP + ScrollTrigger y TypeScript para mantener un código sólido y mantenible. Introduce una funcionalidad nueva: un tablón interactivo en el que cada usuario que visite el sitio web puede plasmar unas palabras a modo de feedback comunitario.",
+        en: "The landing page for the gourmet snack brand Santa Papa draws on the elegant, satirical, and bold touches that characterize the brand. It was developed using Next.js and React as its foundation, a Tailwind CSS layer complementing the custom CSS, interactive animations with GSAP + ScrollTrigger, and TypeScript to maintain robust and maintainable code. It introduces a new feature: an interactive message board where each visitor can leave a message as a form of community feedback.",
+      },
+      tech: ["Next.js", "React", "GSAP", "Tailwind CSS", "CSS3"],
+      thumbnail: "spd1.webp",
+      projectUrl: "https://www.santapapa.es",
+      desktop: {
+        vimeoUrl: "https://www.youtube-nocookie.com/embed/pNqzVj0riEc?si=IZFVmsVyJUjjx5_c",
+        images: [
+          { src: "spd1.webp",  alt: "Vista desktop 1"  },
+          { src: "spd2.webp",  alt: "Vista desktop 2"  },
+          { src: "spd3.webp",  alt: "Vista desktop 3"  },
+          { src: "spd4.webp",  alt: "Vista desktop 4"  },
+          { src: "spd5.webp",  alt: "Vista desktop 5"  },
+          { src: "spd6.webp",  alt: "Vista desktop 6"  },
+          { src: "spd7.webp",  alt: "Vista desktop 7"  },
+          { src: "spd8.webp",  alt: "Vista desktop 8"  },
+        ],
+      },
+      mobile: {
+        vimeoUrl: "<https://www.youtube-nocookie.com/embed/J8noUfO0jac",
+        images: [
+          { src: "spm1.webp", alt: "Vista móvil 1" },
+          { src: "spm2.webp", alt: "Vista móvil 2" },
+          { src: "spm3.webp", alt: "Vista móvil 3" },
+          { src: "spm4.webp", alt: "Vista móvil 4" },
+          { src: "spm5.webp", alt: "Vista móvil 5" },
+        ],
+      },
+    },
+  
+  
+  
+
+  //===========================VULCAN==========================
   {
     id: "vulcan",
     title: "Vulcan",
@@ -27,7 +71,7 @@ export const frontendProjects: FrontendProject[] = [
       es: "El website de Vulcan hace justicia a su línea de cosméticos de procedencia volcánica y sostenible. Es una landing page con clase y contenido cautivadores, desarrollada con HTML5, CSS3 y JavaScript. Incluye animaciones CSS avanzadas, scroll reveal, 4 colores corporativos concretos y una experiencia de usuario inmersiva tanto en escritorio como en móvil.",
       en: "The Vulcan website does justice to its line of volcanic and sustainable cosmetics. It is a landing page with captivating style and content, developed with HTML5, CSS3 and JavaScript. It includes advanced CSS animations, scroll reveal, 4 specific brand colors and an immersive user experience on both desktop and mobile.",
     },
-    tech: ["HTML5", "CSS3", "JavaScript"],
+    tech: ["CSS3", "JavaScript"],
     thumbnail: "d1.webp",
     projectUrl: "https://pedro-millan.github.io/Vulcan/",
     desktop: {
@@ -73,7 +117,7 @@ export const frontendProjects: FrontendProject[] = [
       es: "Boggo Fresh Bagel es una web estática desarrollada para un restaurante ficticio especializado en bagels, con una identidad visual inspirada en los diners americanos de los años 50. El proyecto presenta una experiencia colorida, divertida y responsive, incluyendo una home con vídeo y animaciones, carta de productos por categorías, formulario de reserva de mesa, Club Boggo con sistema de puntos y páginas informativas complementarias.",
       en: "Boggo Fresh Bagel is a static website developed for a fictional restaurant specialized in bagels, with a visual identity inspired by 1950s American diners. The project offers a colorful, playful and responsive experience, including a home page with video and animations, a product menu organized by categories, a table reservation form, Club Boggo with a points system, and additional informational pages.",
     },
-    tech: ["HTML5", "CSS3", "JavaScript"],
+    tech: ["CSS3", "JavaScript"],
     thumbnail: "boggo_desktop/1d.webp",
     projectUrl: "https://pedro-millan.github.io/Boggo/",
     desktop: {
