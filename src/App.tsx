@@ -29,9 +29,9 @@ function GlobalCTA() {
   const { pathname } = useLocation();
   const alreadyHasCta = [
     "/", "/about", "/contact", "/frontend-projects", "/shopify-dev", "/web-apps", "/projects",
-    "/frontend-projects/vulcan", "/frontend-projects/boggo", "/shopify-dev/shutsami", "/web-apps/lowfator",
+    "/shopify-dev/shutsami", "/web-apps/lowfator",
   ].includes(pathname);
-  if (alreadyHasCta) return null;
+  if (alreadyHasCta || pathname.startsWith("/frontend-projects/")) return null;
 
   return (
     <section className="bg-neutral-950 pb-24 text-white md:pb-32">

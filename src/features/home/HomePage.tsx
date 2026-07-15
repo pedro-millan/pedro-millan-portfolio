@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import { frontendProjects } from "@/features/frontend-projects/data/frontendProjects";
 import { shopifyProjects } from "@/features/shopify-dev/data/shopifyProjects";
-import { webApps } from "@/features/web-apps/data/webApps";
 
 const base = import.meta.env.BASE_URL;
 
@@ -22,7 +21,7 @@ function FeaturedProjectCard({
   return (
     <Link
       to={to}
-      className="group overflow-hidden rounded-[2rem] border border-neutral-200 bg-white shadow-[0_20px_70px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_90px_rgba(0,0,0,0.14)]"
+      className="group overflow-hidden rounded-[2rem] bg-white shadow-[0_20px_70px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_90px_rgba(0,0,0,0.14)]"
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
         <img
@@ -107,13 +106,13 @@ export default function HomePage() {
   const { t, lang } = useLanguage();
   const h = t.home;
   const vulcan = frontendProjects.find((project) => project.id === "vulcan")!;
+  const santaPapa = frontendProjects.find((project) => project.id === "santa-papa")!;
   const shutsami = shopifyProjects.find((project) => project.id === "shutsami")!;
-  const lowfator = webApps.find((project) => project.id === "lowfator")!;
 
   const copy = {
     es: {
 
-      headline: "Full Stack Developer",
+      headline: "Full Stack Web Developer",
       headlineSub: "Creación de interfaces, websites profesionales, plataformas e-commerce como Shopify Developer, aplicaciones web y herramientas en línea.",
       aboutLabel: "Más sobre mí",
       projectsTitle: "Proyectos Destacados",
@@ -131,10 +130,9 @@ export default function HomePage() {
       featured: {
         vulcan:
           "Landing page profesional para línea de productos de cosmética volcánica genderless, con branding elegante, animaciones sofisticadas y experiencia responsive.",
+        santaPapa: santaPapa.description.es,
         shutsami:
           "E-commerce demo en Shopify con tema personalizado, secciones Liquid, estética oriental y enfoque de tienda real.",
-        lowfator:
-          "Aplicación web full stack para procesado creativo de audio, con React, FastAPI, WaveSurfer, FFmpeg y exportación WAV/MP3.",
       },
       stack: [
         {
@@ -161,7 +159,7 @@ export default function HomePage() {
     },
     en: {
 
-      headline: "Full Stack Developer",
+      headline: "Full Stack Web Developer",
       headlineSub: "Creation of interfaces, professional websites, e-commerce platforms such as Shopify Developer, web applications and online tools.",
       aboutLabel: "More about me",
       projectsTitle: "Featured Projects",
@@ -179,10 +177,9 @@ export default function HomePage() {
       featured: {
         vulcan:
           "Professional landing page for a volcanic genderless cosmetic products line, with elegant branding, sofisticated animations and a responsive experience.",
+        santaPapa: santaPapa.description.en,
         shutsami:
           "Shopify demo e-commerce with a custom theme, Liquid sections, oriental aesthetics and a real-store approach.",
-        lowfator:
-          "Full-stack web app for creative audio processing, built with React, FastAPI, WaveSurfer, FFmpeg and WAV/MP3 export.",
       },
       stack: [
         {
@@ -341,18 +338,18 @@ export default function HomePage() {
             </div>
             <div className="reveal-up reveal-delay-2">
               <FeaturedProjectCard
-                title="Shutsami"
-                description={copy.featured.shutsami}
-                image={shutsami.thumbnail}
-                to="/shopify-dev/shutsami"
+                title="Santa Papa"
+                description={copy.featured.santaPapa}
+                image={santaPapa.thumbnail}
+                to="/frontend-projects/santa-papa"
               />
             </div>
             <div className="reveal-up reveal-delay-3">
               <FeaturedProjectCard
-                title="LowFator"
-                description={copy.featured.lowfator}
-                image={lowfator.thumbnail}
-                to="/web-apps/lowfator"
+                title="Shutsami"
+                description={copy.featured.shutsami}
+                image={shutsami.thumbnail}
+                to="/shopify-dev/shutsami"
               />
             </div>
           </div>

@@ -45,7 +45,7 @@ export const frontendProjects: FrontendProject[] = [
         ],
       },
       mobile: {
-        vimeoUrl: "<https://www.youtube-nocookie.com/embed/J8noUfO0jac",
+        vimeoUrl: "https://www.youtube-nocookie.com/embed/J8noUfO0jac",
         images: [
           { src: "spm1.webp", alt: "Vista móvil 1" },
           { src: "spm2.webp", alt: "Vista móvil 2" },
@@ -57,8 +57,6 @@ export const frontendProjects: FrontendProject[] = [
     },
   
   
-  
-
   //===========================VULCAN==========================
   {
     id: "vulcan",
@@ -147,4 +145,48 @@ export const frontendProjects: FrontendProject[] = [
       ],
     },
   },
+
+
+      //===========================CÁRITAS==========================
+      {
+        id: "caritas",
+        title: "Cáritas Banyeres de Mariola",
+        description: {
+          es: "Sitio web para Cáritas Parroquial Banyeres de Mariola",
+          en: "Cáritas Parroquial Banyeres de Mariola website",
+        },
+        longDescription: {
+          es: "Formas sutiles, minimalismo y luz convergen en esta plataforma web para dar visibilidad a la labor de Cáritas, mostrar sus actividades tanto gráfica como textualmente y dar facilidad al usuario que precise de su ayuda.",
+          en: "Subtle forms, minimalism, and light converge on this web platform to highlight the work of Cáritas, showcase its activities through both visuals and text, and make it easy for users in need of assistance to access help.",
+        },
+        tech: ["React", "Vite", "Framer Motion", "React Router", "CSS3", "JavaScript"],
+        thumbnail: "thumbnail.webp",
+        projectUrl: "https://www.caritasbanyeres.com",
+        desktop: {
+          vimeoUrl: "https://www.youtube.com/embed/g_22YWAPNQQ?si=mGRPjptv8s2Xo3en",
+          images: [
+            { src: "cd1.webp",  alt: "Vista desktop 1"  },
+            { src: "cd3.webp",  alt: "Vista desktop 3"  },
+            { src: "cd4.webp",  alt: "Vista desktop 4"  },
+            { src: "cd5.webp",  alt: "Vista desktop 5"  },
+            { src: "cd6.webp",  alt: "Vista desktop 6"  },
+            { src: "cd7.webp",  alt: "Vista desktop 7"  },
+            { src: "cd8.webp",  alt: "Vista desktop 8"  },
+          ],
+        },
+        mobile: {
+          vimeoUrl: "https://www.youtube-nocookie.com/embed/rw6LyGE2F_8",
+          images: [
+            { src: "cm1.webp", alt: "Vista móvil 1" },
+            { src: "cm2.webp", alt: "Vista móvil 2" },
+            { src: "cm3.webp", alt: "Vista móvil 3" },
+            { src: "cm4.webp", alt: "Vista móvil 4" },
+            { src: "cm5.webp", alt: "Vista móvil 5" },
+            { src: "cm6.webp", alt: "Vista móvil 6" },
+          ],
+        },
+      },
+
 ];
+
+
